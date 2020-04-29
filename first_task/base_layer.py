@@ -1,4 +1,3 @@
-# Base class
 class BaseLayer:
     def __init__(self):
         self.input = None

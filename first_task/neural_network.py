@@ -44,7 +44,7 @@ class NeuralNetwork:
                     output = layer.forward_propagation(output)
 
                 # compute loss (for display purpose only)
-                err += self.loss(y_train[j], output)
+                err = err + self.loss(y_train[j], output)
 
                 # backward propagation
                 error = self.loss_prime(y_train[j], output)
@@ -52,5 +52,5 @@ class NeuralNetwork:
                     error = layer.backward_propagation(error, learning_rate)
 
             # calculate average error on all samples
-            err /= samples
-            print('epoch %d/%d   error=%f' % (i+1, epochs, err))
+            err = err / samples
+            print(f'epoch {i + 1}/{epochs}   error={err}')

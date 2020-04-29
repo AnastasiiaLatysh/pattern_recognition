@@ -1,4 +1,3 @@
-
 import numpy as np
 
 from first_task.neural_network import NeuralNetwork
